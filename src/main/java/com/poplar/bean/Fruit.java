@@ -8,5 +8,5 @@ import lombok.Data;
 @Data
 public class Fruit {
 
-    private Apple apple;
+    private PostConstructAndPreDestroyTest apple;
 }

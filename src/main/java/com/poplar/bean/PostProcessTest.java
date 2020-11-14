@@ -6,9 +6,12 @@ import org.springframework.stereotype.Component;
 
 /**
  * Create BY poplar ON 2020/4/16
+ * BeanPostProcessor 在bean初始化前后对bean进行操作
+ *   postProcessBeforeInitialization 在bean初始化之前工作
+ *   postProcessAfterInitialization  在bean初始化之后工作
  */
 @Component
-public class Orange implements BeanPostProcessor {
+public class PostProcessTest implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {

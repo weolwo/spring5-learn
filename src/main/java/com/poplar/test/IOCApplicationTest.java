@@ -1,6 +1,6 @@
 package com.poplar.test;
 
-import com.poplar.bean.Banana;
+import com.poplar.bean.XXXAwareTest;
 import com.poplar.config.AutoConfig;
 import com.poplar.config.BeanLifeCofig;
 import com.poplar.config.ConfigTest1;
@@ -29,7 +29,6 @@ public class IOCApplicationTest {
     public void test2() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanLifeCofig.class);
         String[] names = context.getBeanDefinitionNames();
-        System.out.println(context.getBean("potato "));
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i]);
         }
@@ -40,7 +39,7 @@ public class IOCApplicationTest {
     @Test
     public void test3() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AutoConfig.class);
-        System.out.println(context.getBean(Banana.class));
+        System.out.println(context.getBean(XXXAwareTest.class));
         System.out.println(context);
     }
 }

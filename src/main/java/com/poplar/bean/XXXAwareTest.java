@@ -10,9 +10,10 @@ import org.springframework.util.StringValueResolver;
 
 /**
  * Create BY poplar ON 2020/4/16
+ * 实现 ApplicationContextAware 该接口将容器注入到组件中
  */
 @Component
-public class Banana implements EmbeddedValueResolverAware, ApplicationContextAware, BeanNameAware {
+public class XXXAwareTest implements EmbeddedValueResolverAware, ApplicationContextAware, BeanNameAware {
 
     ApplicationContext applicationContext;
 
@@ -23,9 +24,9 @@ public class Banana implements EmbeddedValueResolverAware, ApplicationContextAwa
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println(applicationContext.getBean(Banana.class));
+        System.out.println(applicationContext.getBean(XXXAwareTest.class));
         System.out.println(applicationContext);
-        //把得到的spring容器板寸起来
+        //把得到的spring容器保存起来
         this.applicationContext = applicationContext;
     }
 

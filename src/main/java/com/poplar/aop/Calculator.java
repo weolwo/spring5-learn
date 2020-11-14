@@ -10,4 +10,9 @@ public class Calculator {
         System.out.println("add 运行。。。");
         return x + y;
     }
+
+    public Integer div(int x, int y) {
+        System.out.println("div 运行。。。");
+        return x / y;
+    }
 }

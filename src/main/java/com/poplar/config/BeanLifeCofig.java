@@ -1,9 +1,8 @@
 package com.poplar.config;
 
-import com.poplar.bean.Apple;
+import com.poplar.bean.InitializingBeanAndDisposableBeanTest;
+import com.poplar.bean.PostConstructAndPreDestroyTest;
 import com.poplar.bean.Role;
-import com.poplar.bean.Teacher;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -16,18 +15,19 @@ import org.springframework.context.annotation.PropertySource;
 @ComponentScan(basePackages = "com.poplar.bean")
 public class BeanLifeCofig {
 
-    @Bean(initMethod = "init", destroyMethod = "destroy")
+    //@Bean(initMethod = "init", destroyMethod = "destroy")
     public Role role() {
         return new Role();
     }
 
-    @Bean
-    public Teacher teacher() {
-        return new Teacher();
+    //@Bean
+    public InitializingBeanAndDisposableBeanTest initializingBeanAndDisposableBeanTest() {
+        return new InitializingBeanAndDisposableBeanTest();
     }
 
-    @Bean
-    public Apple apple() {
-        return new Apple();
+    //@Bean
+    public PostConstructAndPreDestroyTest postConstructAndPreDestroyTest() {
+        return new PostConstructAndPreDestroyTest();
     }
+
 }

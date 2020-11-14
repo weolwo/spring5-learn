@@ -1,7 +1,7 @@
 package com.poplar.config;
 
-import com.poplar.bean.Apple;
 import com.poplar.bean.Fruit;
+import com.poplar.bean.PostConstructAndPreDestroyTest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class AutoConfig {
 
     @Bean
-    public Fruit fruit(Apple apple) {
+    public Fruit fruit(PostConstructAndPreDestroyTest apple) {
         Fruit fruit = new Fruit();
         fruit.setApple(apple);
         System.out.println(apple);

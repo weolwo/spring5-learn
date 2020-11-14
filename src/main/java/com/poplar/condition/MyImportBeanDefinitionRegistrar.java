@@ -1,6 +1,6 @@
 package com.poplar.condition;
 
-import com.poplar.bean.Teacher;
+import com.poplar.bean.InitializingBeanAndDisposableBeanTest;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
@@ -15,7 +15,7 @@ public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
         if (registry.containsBeanDefinition("com.poplar.condition.WindowsCondition")) {
-            BeanDefinition beanDefinition = new RootBeanDefinition(Teacher.class);
+            BeanDefinition beanDefinition = new RootBeanDefinition(InitializingBeanAndDisposableBeanTest.class);
             registry.registerBeanDefinition("teacher", beanDefinition);
         }
     }
