@@ -9,6 +9,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class ExtendTest {
 
+    /**
+     * spring整个执行过程：
+     * 1.首先创建一个容器 AbstractRefreshableApplicationContext.refreshBeanFactory()
+     * 2.AnnotationConfigApplicationContext.scan(String... basePackages)扫描标有
+     * 3.
+     */
+
     @Test
     public void test1() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ExtendConfig.class);
